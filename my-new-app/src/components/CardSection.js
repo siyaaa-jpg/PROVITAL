@@ -10,7 +10,7 @@ import substance from "../imagesss/Rectangle 160.png";
 const CardSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Define the cards array within the component
+  // Define the cards array
   const cards = [
     { img: nutrition, title: "Nutrition", desc: "Evidence supports the use of a whole food, plant-predominant diet to prevent, treat, and reverse chronic illness." },
     { img: physical, title: "Physical Activity", desc: "Regular physical activity is key to managing weight, improving mental health, and reducing the risk of chronic disease." },
@@ -20,7 +20,6 @@ const CardSection = () => {
     { img: substance, title: "Substance Abuse", desc: "Avoiding tobacco, limiting alcohol use, and abstaining from harmful substances are vital for long-term health." },
   ];
 
-  // Move to the next slide
   const nextSlide = () => {
     if (currentIndex < cards.length - 3) {
       setCurrentIndex(currentIndex + 1);
@@ -29,7 +28,6 @@ const CardSection = () => {
     }
   };
 
-  // Move to the previous slide
   const prevSlide = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
@@ -38,13 +36,12 @@ const CardSection = () => {
     }
   };
 
-  // Continuous loop functionality with useEffect
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide(); // Automatically move to the next slide
+      nextSlide();
     }, 3000); // Slide every 3 seconds
 
-    return () => clearInterval(interval); // Clean up the interval on unmount
+    return () => clearInterval(interval);
   }, [currentIndex]);
 
   return (
@@ -55,7 +52,7 @@ const CardSection = () => {
       </button>
 
       {/* Cards Container */}
-      <div className="cards-container" style={{ transform: `translateX(-${currentIndex * (247 + 20)}px)` }}>
+      <div className="cards-container" style={{ transform: `translateX(-${currentIndex * (275 + 20)}px)` }}>
         {cards.map((card, index) => (
           <div className="card" key={index}>
             <img src={card.img} alt={card.title} />
@@ -74,3 +71,4 @@ const CardSection = () => {
 };
 
 export default CardSection;
+
