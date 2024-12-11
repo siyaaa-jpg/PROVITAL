@@ -1,0 +1,41 @@
+/* src/Header.css */
+.header {
+  background: #fff;
+  padding: 10px 32px;
+  border-bottom: 1px solid #eee;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 16px;
+  color: #606060;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-link {
+  font-size: 14px;
+  color: #cbcbcb;
+  text-decoration: none;
+  font-weight: 600;
+}

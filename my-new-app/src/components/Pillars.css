@@ -1,0 +1,47 @@
+.pillars-carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%;  /* Adjust the width as needed */
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px 0;
+  }
+  
+  .pillars-carousel {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .pillar-card {
+    margin: 0 10px;
+  }
+  
+  .carousel-arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    z-index: 2;
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  .carousel-arrow:hover {
+    color: #007bff;
+  }
+  
+  

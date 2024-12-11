@@ -1,0 +1,68 @@
+/* image-container - Wrapping both columns */
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Column 1 and Column 2 styling */
+.column {
+  width: 45%;
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-1, .column-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Making the images fit */
+.column-1 img, .column-2 img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+/* Column 1 - top to bottom animation */
+.column-1 img {
+  animation-name: topToBottom;
+  animation-duration: 12s; /* Adjust time to control speed */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes topToBottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%); /* Moves the images within the column */
+  }
+}
+
+/* Column 2 - bottom to top animation */
+.column-2 img {
+  animation-name: bottomToTop;
+  animation-duration: 12s; /* Same duration for synchronization */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bottomToTop {
+  0% {
+    transform: translateY(100%); /* Start from the bottom */
+  }
+  100% {
+    transform: translateY(0); /* Moves the images upwards */
+  }
+}

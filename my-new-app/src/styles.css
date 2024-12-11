@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f8f8f8;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    top: 100%;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .hero-section {
+    display: flex;
+    padding: 2rem;
+  }
+  
+  .image-columns {
+    display: flex;
+  }
+  
+  .column {
+    margin-right: 1rem;
+  }
+  
+  .column img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-content {
+    margin-left: 2rem;
+  }
+  
+  .card-section {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+  }
+  
+  .card-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+  
+  .card {
+    min-width: 200px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+  }
+  
+  .scroll-left, .scroll-right {
+    background: #ccc;
+    border: none;
+    font-size: 1.5rem;
+  }
+  
